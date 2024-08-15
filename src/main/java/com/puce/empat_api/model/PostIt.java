@@ -22,6 +22,4 @@ public class PostIt {
     @JoinColumn(name = "canvas_id", nullable = false)
     private Canvas canvas;
 
-    private Integer x; // Posición X
-    private Integer y; // Posición Y
 }

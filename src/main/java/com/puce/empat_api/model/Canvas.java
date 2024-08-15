@@ -20,7 +20,11 @@ public class Canvas {
 
     private String name;
     private String description;
-    private String dateCreated; // Puedes usar LocalDate o LocalDateTime si prefieres
+    private String dateCreated;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @OneToMany(mappedBy = "canvas", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<PostIt> postIts;
